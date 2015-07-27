@@ -4,7 +4,7 @@ feature 'likes' do
   before {Picture.create description: 'berries'}
 
   context 'likes can be added' do
-      scenario 'a user like a picture, which increments the like count' do
+      scenario 'a user likes a picture, which increments the like count' do
       visit '/pictures'
       click_link 'Sign up'
       fill_in 'Email', with: 'test123@gmail.com'
