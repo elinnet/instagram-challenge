@@ -19,6 +19,13 @@ feature 'Adding comments' do
     expect(current_path).to eq ('/users/sign_in')
   end
 
-
+  def sign_up
+    visit '/pictures'
+    click_link 'Sign up'
+    fill_in 'Email', with: 'test123@gmail.com'
+    fill_in 'Password', with: '123password'
+    fill_in 'Password confirmation', with: '123password'
+    click_button 'Sign up'
+  end
 
 end
